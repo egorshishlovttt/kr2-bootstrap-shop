@@ -1,0 +1,123 @@
+/* ===================================
+   1. Переменные проекта (переопределяют Bootstrap)
+   =================================== */
+:root {
+  --bs-primary: #2e5bff;
+  --bs-primary-rgb: 46, 91, 255;
+  --bs-link-color: #2e5bff;
+  --bs-link-hover-color: #1e3fc0;
+  --bs-body-font-family: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-accent: #ffc21a;
+  --color-hero: #14212b;
+  --header-offset: 80px;
+  --z-to-top: 1040;
+}
+/* Светлая тема: серо-голубой фон страницы, белые карточки, заметные границы */
+:root, [data-bs-theme="light"] {
+  --bs-body-bg: #dfe6ee;
+  --bs-body-bg-rgb: 223, 230, 238;
+  --bs-border-color: #aab7c4;
+  --bs-secondary-color: #3f4d5a;
+  --surface: #ffffff;
+}
+[data-bs-theme="dark"] {
+  --bs-body-bg: #2b343e;
+  --bs-body-bg-rgb: 43, 52, 62;
+  --bs-border-color: #556473;
+  --bs-body-color: #eef2f6;
+  --bs-secondary-color: #b8c4cf;
+  --surface: #36414d;
+  --bs-primary: #6b8cff;
+  --bs-primary-rgb: 107, 140, 255;
+  --bs-link-color: #8fa8ff;
+  --bs-link-hover-color: #b5c5ff;
+}
+
+/* ===================================
+   2. Базовые стили
+   =================================== */
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-offset); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+h1, h2, h3, .site-header__logo { font-family: "Unbounded", Impact, sans-serif; }
+.btn-primary { --bs-btn-bg: var(--bs-primary); --bs-btn-border-color: var(--bs-primary); --bs-btn-hover-bg: #1e3fc0; --bs-btn-hover-border-color: #1e3fc0; --bs-btn-color: #fff; }
+[data-bs-theme="dark"] .btn-primary { --bs-btn-color: #0b1020; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+[aria-invalid="true"] { border-color: var(--bs-danger); }
+
+/* ===================================
+   3. Блок site-header
+   =================================== */
+.site-header { border-bottom: 3px solid var(--color-accent); }
+.site-header__logo { font-weight: 800; letter-spacing: .02em; }
+.site-header__dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: var(--bs-primary); margin-right: 6px; }
+
+/* ===================================
+   4. Блок hero
+   =================================== */
+.hero { background: var(--color-hero); color: #eef2f5; border-radius: 1rem; overflow: hidden; }
+.hero__title { font-weight: 800; font-size: clamp(2rem, 5vw, 3.2rem); }
+.hero__text { color: #c7d0d6; }
+.hero__image { width: 100%; height: 100%; object-fit: cover; min-height: 220px; }
+.promo { background: var(--color-accent); color: #14212b; border: 0; }
+
+/* ===================================
+   5. Блоки карточек
+   =================================== */
+.training-card { transition: transform .15s, box-shadow .15s; }
+.training-card:hover { transform: translateY(-3px); box-shadow: var(--bs-box-shadow); }
+.training-card__image { aspect-ratio: 3 / 2; object-fit: cover; }
+.trainer-card { text-align: left; cursor: pointer; }
+.trainer-card__avatar, .review__avatar { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--bs-primary); color: #fff; font: 800 1.2rem "Unbounded", sans-serif; }
+[data-bs-theme="dark"] .trainer-card__avatar { color: #0b1020; }
+
+/* ===================================
+   6. Отзывы, галерея, карта
+   =================================== */
+.review { padding: 1.25rem; text-align: center; }
+.review__stars { color: var(--color-accent); font-size: 1.4rem; letter-spacing: 3px; }
+.review__text { font-size: 1rem; }
+.carousel-control-prev-icon, .carousel-control-next-icon { filter: invert(1) grayscale(1); }
+[data-bs-theme="dark"] .carousel-control-prev-icon, [data-bs-theme="dark"] .carousel-control-next-icon { filter: none; }
+.carousel-control-prev, .carousel-control-next { width: 6%; opacity: .9; }
+.gallery__image { aspect-ratio: 3 / 2; object-fit: cover; }
+.map-placeholder { min-height: 240px; display: grid; place-items: center; border-radius: .75rem; font-weight: 700; background: repeating-linear-gradient(45deg, var(--bs-border-color) 0 2px, transparent 2px 22px), var(--bs-tertiary-bg); }
+.price-big { font: 800 2rem "Unbounded", sans-serif; color: var(--bs-primary); }
+
+/* ===================================
+   7. Подвал и кнопка «Наверх»
+   =================================== */
+.site-footer { background: var(--color-hero); color: #c7d0d6; }
+.site-footer a { color: #fff; }
+.site-footer__social { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--color-accent); color: #14212b !important; font-weight: 800; text-decoration: none; }
+.site-footer__links li { margin-bottom: .35rem; }
+.map-frame iframe { display: block; border: 0; border-radius: .75rem; margin-bottom: .5rem; }
+.to-top { position: fixed; right: 1rem; bottom: 1rem; z-index: var(--z-to-top); display: none; }
+.to-top--visible { display: grid; place-items: center; }
+
+/* ===================================
+   8. Поверхности и контраст
+   =================================== */
+.card, .accordion-item, .modal-content, .list-group-item, .tab-content { --bs-card-bg: var(--surface); background-color: var(--surface); border-color: var(--bs-border-color); }
+.accordion { --bs-accordion-bg: var(--surface); --bs-accordion-border-color: var(--bs-border-color); }
+.table { --bs-table-bg: var(--surface); }
+.form-control, .form-select, .input-group-text { background-color: var(--surface); border-color: var(--bs-border-color); }
+.site-header { background-color: var(--surface) !important; box-shadow: 0 2px 8px rgba(0, 0, 0, .12); }
+.btn-outline-secondary { --bs-btn-color: var(--bs-body-color); --bs-btn-border-color: var(--bs-border-color); }
+.btn-outline-primary { --bs-btn-border-width: 2px; }
+.nav-tabs .nav-link.active { background-color: var(--surface); }
+
+/* ===================================
+   9. Слоты записи: свободно (зелёный) / занято (красный)
+   =================================== */
+.btn-outline-success { --bs-btn-border-width: 2px; --bs-btn-color: #0f7a45; --bs-btn-border-color: #198754; background-color: rgba(25, 135, 84, .14); font-weight: 600; }
+.btn-outline-success:hover { --bs-btn-color: #fff; }
+[data-bs-theme="dark"] .btn-outline-success { --bs-btn-color: #6fdc9f; --bs-btn-border-color: #3fbf7a; background-color: rgba(63, 191, 122, .16); }
+.btn-outline-danger:disabled, .btn-outline-danger.disabled { --bs-btn-disabled-color: #c62d3d; --bs-btn-disabled-border-color: #dc3545; --bs-btn-disabled-bg: rgba(220, 53, 69, .16); opacity: .9; text-decoration: line-through; }
+[data-bs-theme="dark"] .btn-outline-danger:disabled { --bs-btn-disabled-color: #ff8b97; --bs-btn-disabled-border-color: #ff6b7a; }
+
+/* ===================================
+   10. Фото тренеров и липкая панель фильтров
+   =================================== */
+.trainer-card__photo { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: .6rem; object-position: center top; }
+.trainer-modal__photo { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto; object-position: center top; }
+.filters-bar { position: sticky; top: var(--header-offset); z-index: 1010; background-color: var(--bs-body-bg); padding: .75rem .75rem .5rem; margin-left: -.75rem; margin-right: -.75rem; border-bottom: 2px solid var(--bs-border-color); box-shadow: 0 10px 10px -8px rgba(0, 0, 0, .3); }

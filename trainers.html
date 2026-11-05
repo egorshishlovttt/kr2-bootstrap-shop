@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Тренеры скалодрома: специализация, стаж, достижения и расписание групп.">
+  <title>Тренеры — скалодром «Хват»</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Тренеры — скалодром «Хват»">
+  <meta property="og:description" content="Тренеры скалодрома: специализация, стаж, достижения и расписание групп.">
+  <meta property="og:image" content="https://egorshishlovttt.github.io/kr2-bootstrap-shop/images/preview.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Onest:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/theme.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header class="site-header sticky-top bg-body">
+    <nav class="navbar navbar-expand-lg" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand site-header__logo" href="index.html"><span class="site-header__dot"></span>Хват</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link" href="catalog.html">Тренировки</a></li><li class="nav-item"><a class="nav-link active" href="trainers.html" aria-current="page">Тренеры</a></li><li class="nav-item"><a class="nav-link" href="schedule.html">Расписание и цены</a></li><li class="nav-item"><a class="nav-link" href="about.html">О клубе</a></li></ul>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary btn-sm" id="theme-toggle" type="button" aria-pressed="false">☾ Тёмная</button>
+            <a class="btn btn-primary btn-sm" href="order.html">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container py-4 flex-grow-1">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Главная</a></li><li class="breadcrumb-item active" aria-current="page">Тренеры</li></ol></nav>
+
+    <h1 class="h2 mb-3">Тренеры</h1><p>Нажмите на карточку, чтобы увидеть биографию, достижения и расписание групп.</p>
+    <div class="row g-3"><div class="col-12 col-sm-6 col-lg-3"><button class="card h-100 w-100 trainer-card p-3" type="button" data-bs-toggle="modal" data-bs-target="#trainerModal" data-trainer="0"><img class="trainer-card__photo mb-2" src="images/trainers/trainer-1.jpg" alt="Тренер Анна Громова" width="400" height="400" loading="lazy"><span class="h5 d-block">Анна Громова</span><span class="d-block">Боулдеринг</span><span class="d-block text-body-secondary">Стаж: 9 лет</span></button></div><div class="col-12 col-sm-6 col-lg-3"><button class="card h-100 w-100 trainer-card p-3" type="button" data-bs-toggle="modal" data-bs-target="#trainerModal" data-trainer="1"><img class="trainer-card__photo mb-2" src="images/trainers/trainer-2.jpg" alt="Тренер Дмитрий Ветров" width="400" height="400" loading="lazy"><span class="h5 d-block">Дмитрий Ветров</span><span class="d-block">Скалолазание с верёвкой</span><span class="d-block text-body-secondary">Стаж: 12 лет</span></button></div><div class="col-12 col-sm-6 col-lg-3"><button class="card h-100 w-100 trainer-card p-3" type="button" data-bs-toggle="modal" data-bs-target="#trainerModal" data-trainer="2"><img class="trainer-card__photo mb-2" src="images/trainers/trainer-3.jpg" alt="Тренер Мария Соколова" width="400" height="400" loading="lazy"><span class="h5 d-block">Мария Соколова</span><span class="d-block">Детские группы</span><span class="d-block text-body-secondary">Стаж: 7 лет</span></button></div><div class="col-12 col-sm-6 col-lg-3"><button class="card h-100 w-100 trainer-card p-3" type="button" data-bs-toggle="modal" data-bs-target="#trainerModal" data-trainer="3"><img class="trainer-card__photo mb-2" src="images/trainers/trainer-4.jpg" alt="Тренер Илья Нестеров" width="400" height="400" loading="lazy"><span class="h5 d-block">Илья Нестеров</span><span class="d-block">Соревновательная подготовка</span><span class="d-block text-body-secondary">Стаж: 14 лет</span></button></div><div class="col-12 col-sm-6 col-lg-3"><button class="card h-100 w-100 trainer-card p-3" type="button" data-bs-toggle="modal" data-bs-target="#trainerModal" data-trainer="4"><img class="trainer-card__photo mb-2" src="images/trainers/trainer-5.jpg" alt="Тренер Екатерина Лебедева" width="400" height="400" loading="lazy"><span class="h5 d-block">Екатерина Лебедева</span><span class="d-block">Йога и растяжка</span><span class="d-block text-body-secondary">Стаж: 8 лет</span></button></div><div class="col-12 col-sm-6 col-lg-3"><button class="card h-100 w-100 trainer-card p-3" type="button" data-bs-toggle="modal" data-bs-target="#trainerModal" data-trainer="5"><img class="trainer-card__photo mb-2" src="images/trainers/trainer-6.jpg" alt="Тренер Сергей Орлов" width="400" height="400" loading="lazy"><span class="h5 d-block">Сергей Орлов</span><span class="d-block">Силовая подготовка</span><span class="d-block text-body-secondary">Стаж: 10 лет</span></button></div><div class="col-12 col-sm-6 col-lg-3"><button class="card h-100 w-100 trainer-card p-3" type="button" data-bs-toggle="modal" data-bs-target="#trainerModal" data-trainer="6"><img class="trainer-card__photo mb-2" src="images/trainers/trainer-7.jpg" alt="Тренер Павел Крылов" width="400" height="400" loading="lazy"><span class="h5 d-block">Павел Крылов</span><span class="d-block">Верёвка, техника</span><span class="d-block text-body-secondary">Стаж: 11 лет</span></button></div><div class="col-12 col-sm-6 col-lg-3"><button class="card h-100 w-100 trainer-card p-3" type="button" data-bs-toggle="modal" data-bs-target="#trainerModal" data-trainer="7"><img class="trainer-card__photo mb-2" src="images/trainers/trainer-8.jpg" alt="Тренер Алина Миронова" width="400" height="400" loading="lazy"><span class="h5 d-block">Алина Миронова</span><span class="d-block">Детский боулдеринг и семейные занятия</span><span class="d-block text-body-secondary">Стаж: 6 лет</span></button></div></div>
+    <div class="modal fade" id="trainerModal" tabindex="-1" aria-labelledby="trainer-name" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"><div class="modal-content">
+      <div class="modal-header"><h2 class="modal-title h4" id="trainer-name"></h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button></div>
+      <div class="modal-body"><img class="trainer-modal__photo mb-3" id="trainer-photo" src="" alt="" width="400" height="400"><p class="fw-bold" id="trainer-spec"></p><p id="trainer-bio"></p><h3 class="h6">Достижения</h3><ul id="trainer-awards"></ul><h3 class="h6">Группы и расписание</h3><ul class="list-group" id="trainer-groups"></ul></div>
+      <div class="modal-footer"><a class="btn btn-primary" href="order.html">Записаться</a><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button></div>
+    </div></div></div>
+  </main>
+  <footer class="site-footer py-4 mt-4">
+    <div class="container"><div class="row g-4">
+      <div class="col-12 col-md-4"><h2 class="h5">Хват · скалодром</h2><p>г. Москва, ул. Бауманская, 35<br>Ежедневно 10:00–22:00</p>
+        <a class="site-footer__social" href="about.html#contacts" aria-label="ВКонтакте">VK</a> <a class="site-footer__social" href="about.html#contacts" aria-label="Telegram">TG</a> <a class="site-footer__social" href="about.html#contacts" aria-label="YouTube">YT</a></div>
+      <nav class="col-6 col-md-4" aria-label="Занятия"><h2 class="h6 text-uppercase">Занятия</h2><ul class="list-unstyled mb-0 site-footer__links"><li><a href="catalog.html">Тренировки</a></li><li><a href="trainers.html">Тренеры</a></li><li><a href="schedule.html">Расписание и цены</a></li><li><a href="order.html">Записаться</a></li></ul></nav>
+      <nav class="col-6 col-md-4" aria-label="Клуб"><h2 class="h6 text-uppercase">Клуб</h2><ul class="list-unstyled mb-0 site-footer__links"><li><a href="index.html">Главная</a></li><li><a href="about.html">О клубе</a></li><li><a href="about.html#contacts">Контакты</a></li><li>☎ <a href="tel:+74950001234">+7 (495) 000-12-34</a></li><li>✉ <a href="mailto:hello@hvat-club.ru">hello@hvat-club.ru</a></li></ul></nav>
+    </div></div>
+  </footer>
+  <button class="btn btn-primary to-top" id="to-top" type="button" aria-label="Наверх"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l6-6 6 6"/><path d="M4 17l6-6 6 6"/></svg></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/features.js" defer></script>
+  
+</body>
+</html>
